@@ -1,0 +1,103 @@
+\section*{Assignment 1: Transmission Lines in Frequency Domain}
+\addcontentsline{toc}{section}{\protect\numberline{}Assignment 1: Transmission Lines in Frequency Domain}
+	\subsection*{Part 1: Standing Waves in Waveguide}
+	% de wavelength = afstand tussen 2 knopen * 2 = 2.2*2 = 4.4cm. de phase velocity kwam uit op 1.39c, weet niet meer waarom. 
+	% bij shortcut 33mm komt hetzelfde uit als bij shortcut 55mm.
+	% also, er is blijkbaar geen part 2? w/e.. doei, jasper.
+
+	\subsection*{1.}
+	The laboratory equipment setup is checked in agreement with the block-diagram as shown in the practicum manual~\cite{manual}, before proceeding with the measurements.
+
+	The standing wave is the sum of the generated wave and the reflected wave due to a load, integrated over time. 
+	By adjusting the distance of the detector from the wave generator the wavelength of the standing wave can be determined.
+	By finding two zero voltage points next to eachother, the half wavelength of the EM wave can be obtained. 
+	The resulting wavelength of then calculated by multiplying the difference between the first found zero voltage point $d_{v0,1}$ and the second one $d_{v0,2}$, by a factor of 2. Such that,
+
+	\begin{equation}
+		\lambda = 2\cdot\lambda_{1/2} = 2\cdot|(d_{v0,1} - d_{v0,2})|
+	\end{equation}
+
+	\noindent Using the above equation the resulting standing wavelength $\lambda$ is 4.4 cm.\\
+	\newline	
+	The phase velocity is determined using equation \ref{eq1}, 
+	\begin{equation}
+	\label{eq1}
+	v_p = \lambda f
+	\end{equation}
+
+	\noindent Where $\lambda$ the wavelength and $f$ is the frequency of the wave. Substituting the calculated value for $\lambda = 4.4$ cm and the given frequency of $f = 9.475$ GHz into equation~\ref{eq1}, yields a phase velocity $v_p$ of 1.39$c$. The phase velocity can indeed be greater than the speed of light. This does not mean the group velocity is greater than the speed of light and information cannot travel faster than it.
+	
+	
+	
+	
+%	, given by the following equation,
+%	\begin{equation}
+%	\label{eq2}
+%	\lambda _w = \frac{\lambda _0}{\sqrt{1 - (\frac{\lambda _0}{2a})^2}}
+%	\end{equation}
+%
+%	Where $\lambda_0 = c / f$ (speed of light in free space $c$, frequency $f$), $a$ the size of the long side of the waveguide.
+%	Substituting the given values $f = 9.475$ GHz and $a = 22.86$ mm in equation~\ref{eq2}, yields a wavelength of   
+%	The wavelength in the waveguide is determined by equation \ref{eq2} with an a of 22.86 mm at a frequency of 9.475 GHz. The result is that the phase velocity is $v = 1.39c$. This is the case because the wavelength is modified inside the waveguide.
+			
+	\subsection*{2.}
+	The voltage-standing-wave ratio (VSWR) of different loads is calculated by determining the minimum and maximum voltage. The VSWR can be obtained using the following equation,
+
+	\begin{equation}
+		\label{eq:vswr}
+		VSWR = \rho = \frac{E_{max}}{E_{min}}
+	\end{equation}
+	
+	\noindent Where $E_{max}$ is the maximum voltage and $E_{min}$ the minimum voltage.
+
+	Using the VSWR the absolute value of the reflection coefficient can be obtained,
+
+	\begin{equation}
+		\label{abs_rfc}
+		|\Gamma| = \frac{\rho - 1}{\rho + 1}
+	\end{equation}
+
+	The results of the VSWR, reflection coefficient and power of different loads can be seen in the table below (Table 1). The equation for the power delivered to the load is displayed in equation \ref{eq:power}.
+	
+	\begin{equation}
+		\label{eq:power}
+		P_{abs} = \frac{(V_0^+)^2}{2Z_0} (1 - |\Gamma|^2)
+	\end{equation}
+
+	
+	\begin{table}[]
+	\centering
+	\label{vswr_rfc_power}
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline 
+	\textbf{Load}           & $\boldsymbol{E_{min}}$ (mV) & $\boldsymbol{E_{max}}$ (mV) & \textbf{VSWR}             & $\boldsymbol{|\Gamma|}$ & \textbf{Power} (W) \\
+\hline
+	Open waveguide & 44.3           &  49.0          &  1.11            &     0.052       &   $1.20 \cdot 10^{-3} / Z_0 $   \\
+\hline
+	Short circuits & 0.02           & 80             & $4.0\times 10^3$ &      1      &   0    \\
+\hline			
+	Matched load   & 45.4           & 50.3           & 1.11             &     0.052       &   $1.27 \cdot 10^{-3} / Z_0 $   \\
+\hline
+	Horn antenna   & 45.2           & 51.1           & 1.13             &      0.061      &  $1.31 \cdot 10^{-3} / Z_0 $  \\ 
+
+\hline
+	\end{tabular}
+	\caption{Results for different loads}
+	\end{table}
+
+
+	%\subsubsection*{a.}
+	%The open waveguide 
+	%
+	%\subsubsection*{b.}
+	%Both the short circuits give a minimum of 0.02 mV and a maximum of 80 mV. This gives a VSWR of about $4.0 \cdot 10^3$.
+	%
+	%\subsubsection*{c.}
+
+	%The matched load gives a minimum of 45.4 mV and a maximum of 50.3 mV giving a VSWR of 1.11.
+	%
+	%\subsubsection*{d.}
+	%The horn antenna gives a minimum of 45.2 mV and a maximum of 51.1 mV. This gives a VSWR of 1.13.
+	
+	\subsection*{3.}
+	There is no shift in antinodes in our measurement regarding the two short-circuits. This is not surprising as the difference between the 33~mm and the 55~mm short-circuit is exactly 22~mm which is half of the wavelength.
