@@ -1,0 +1,47 @@
+\documentclass[11pt, a4paper, oneside]{article}
+
+\usepackage[margin=3cm]{geometry}
+\usepackage{graphicx} %Pretty documents
+\usepackage{grffile} %Allow multi-dots in image names (otherwise first dot seen as file extension)
+\graphicspath{{./images/}}
+\usepackage{parskip} %No Indentation for Paragraphs
+\usepackage[hidelinks]{hyperref} %Clickable PDF's
+\usepackage{blindtext} %Use for text fillers and formatting
+\usepackage{float} %Allow H in figures to fix position
+\usepackage{siunitx} %Proper SI Units \SI{Value}{Units}
+\usepackage{caption} %Allows caption*() to remove prefix for equations in figures
+\usepackage{listings} %code
+
+%Following Part makes each section on a new page
+\let\stdsection\section
+\renewcommand\section{\newpage\stdsection}
+
+\title{\textsc{Session 2 Rapport - Groep 03.1}
+	\newline \textbf{EE3P11 - Electromagnetism Practical}\\
+}
+\author{
+	\textsc{Rijk van Wijk | 4261569}\\
+	and
+	\textsc{Nicolaas du Plessis | 4203933}\\
+	and
+	\textsc{Paul Beckers | XXXXXXX}\\
+	and
+	\textsc{Jens Coppoolse | XXXXXXX}\\
+	and
+	\textsc{Michiel Desmedt | XXXXXXX}\\
+}
+\date {\today}
+
+\begin{document}
+	\maketitle
+	\thispagestyle{empty}
+	\newpage
+	
+	\section*{Assignment 1: Stuff n Things}
+	\input{latex_sections/ses_2_ass_1.tex}
+	\section*{Assignment 2: Stuff n Things}
+	\input{latex_sections/ses_2_ass_2.tex}
+
+	\section*{Appendix}
+	\input{latex_sections/ses_2_appdix.tex}
+\end{document}
