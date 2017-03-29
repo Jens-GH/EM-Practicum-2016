@@ -11,13 +11,15 @@
 \usepackage{siunitx} %Proper SI Units \SI{Value}{Units}
 \usepackage{caption} %Allows caption*() to remove prefix for equations in figures
 \usepackage{listings} %code
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
 
 %Following Part makes each section on a new page
 \let\stdsection\section
 \renewcommand\section{\newpage\stdsection}
 
-\title{\textsc{Session 2 Rapport - Groep 03.1}
-	\newline \textbf{EE3P11 - Electromagnetism Practical}\\
+\title{\textsc{Session 2 Report - Group 03.1}
+	\newline \textbf{EE3P11 - Electromagnetism Practical}
+	\newline Free space propagation of EM Waves\\
 }
 \author{
 	\textsc{Rijk van Wijk | 4261569}\\
@@ -28,7 +30,7 @@
 	and
 	\textsc{Jens Coppoolse | XXXXXXX}\\
 	and
-	\textsc{Michiel Desmedt | XXXXXXX}\\
+	\textsc{Michiel Desmedt | 4221095}\\
 }
 \date {\today}
 
@@ -37,10 +39,12 @@
 	\thispagestyle{empty}
 	\newpage
 	
-	\section*{Assignment 1: Stuff n Things}
+	\section*{Assignment 1: Free Space Propagation}
 	\input{latex_sections/ses_2_ass_1.tex}
-	\section*{Assignment 2: Stuff n Things}
+	\section*{Assignment 2: Polarisation State Measurements}
 	\input{latex_sections/ses_2_ass_2.tex}
+	\section*{References}
+	\input{latex_sections/ses_2_ref.tex}
 
 	\section*{Appendix}
 	\input{latex_sections/ses_2_appdix.tex}
