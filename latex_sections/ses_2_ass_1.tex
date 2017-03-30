@@ -79,7 +79,7 @@ Array (vertical)   & 0.016                                  & -19.0             
 \end{tabular}
 \end{table}
 
-By comparing the measured voltage, which is proportional to the power of the received wave, with the voltage measured when no medium is present, the absorbing or insulating properties of the media can be discussed.
+By comparing the measured voltage, which is proportional to the power of the received wave, with the voltage measured when no medium is present, the absorbing or insulating properties of the media can be discussed. It should be noted that for the three media where the power is expected to be absorbed (metal plate, absorbing material and vertical array), the amplitude is around $17mV$. This common offset can be due to measurement offsets, or the EM wave reflecting around the room and hitting the receiving antenna, while the small differences can be explained by the insulating/absorbing materials not being perfect absorbers.
 
 \begin{itemize}
     \item It can be seen that the metal sheet absorbs most of the transmitted power. This is due to the fact that no electric field can be present in a good conductor (the metal plate short circuits the field), so there will be no electric field present to be measured behind the plate.
@@ -88,5 +88,29 @@ By comparing the measured voltage, which is proportional to the power of the rec
     
     \item The absorbing material basically absorbs the electric field, reducing the electric field in the medium to almost zero, which can be seen by an attenuation of about $-18 dB$.
     
-    \item While the amplitude of the wave seems to be amplified due to the array of parallel conducting rods in a horizontal orientation, this cannot be the case in reality. The amplification of $0.7dB$ is most likely due to measurement error. It is expected however, that the attenuation will be very low.
+    \item While the amplitude of the wave seems to be amplified due to the array of parallel conducting rods in a horizontal orientation, this cannot be the case in reality. The amplification of $0.7dB$ is most likely due to measurement error. It is expected however, that the attenuation will be very low. This is because when the wave hits the array, the orientation of the polarisation of the wave will be perpendicular to the orientation of the rods, which means there can be an electric potential between the rods, which can then be transmitted again via the backside of the array. This is true provided the ends of the rods are isolated from each other.
+    
+    \item It can be seen that the transmitted power is mostly absorbed by the array with the rods in a vertical orientation. This is because the waves hit the rods along their length, which then acts like the metal plate, shorting the electric field present on the rods. This means no electric field will be present behind the array, and thus, the amplitude of the wave will be zero, or very low.
 \end{itemize}
+
+\subsection*{Influence of Polarisation}
+
+For this experiment, the receiving antenna is rotated $90\si{\degree}$, to investigate the influence of the orientation of the polarisation of the antennas. Next to that, the effect of the array of parallel conducting rods, which effectively is an anisotropic medium, is investigated.\\
+
+When the orientation of the polarisation is matched, an amplitude of about $0.143V$ was read on the oscilloscope. When the receiver antenna is rotated $90\si{\degree}$, cross-polarisation occurs. This means that almost none of the transmitted power is detected. At this cross-polarisation state, the amplitude read from the oscilloscope is $0.016V$, which results in
+
+\begin{equation*}
+    Q = \frac{0.016}{0.143} = 0.112 \approx -19 dB
+\end{equation*}
+
+Again, as explained in the previous section, the amplitude of $0.016V$ will likely consist of unwanted errors such as measurement offsets, which means the attenuation will probably be even lower. This can be explained qualitatively by considering the following: if the polarisation direction is matched, the receiver will 'see' the full amplitude of the incident wave, whereas when the polarisation differs $90\si{\degree}$, the receiver will only receive an infinitesimally amount of power. \\
+In order to see what the influence is of the array of parallel conducting rods, the array is placed in between the mismatched antennas with a rotation of about $45\si{\degree}$ to either polarisation direction. In this case, the amplitude shown by the oscilloscope is about $0.065V$ which is an attenuation of about $\frac{0.065}{0.143} = 0.455 = -6.85 dB$. In this case, an attenuation of about $0.5$ or $-6 dB$ would be expected, which is explained with the help of Figure \ref{fig:Ass1_att}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Session2_files/transmission.png}
+    \caption{Qualitative example of the direction and magnitude of the electric field, where $\theta$ is the angle between the polarisation state of the incident wave and the orientation of the array.}
+    \label{fig:Ass1_att}
+\end{figure}
+
+In this figure, the incident wave is indicated by the vertical vector $E_i$. As the array of parallel conducting rods only transmits waves that are perpendicular to the rods  $E_{array}$ (as explained in the previous section, part of the electric field magnitude is lost. The magnitude of the received part will be $E_{array} = E_icos(\theta)$. After the wave is transmitted again by the array, the receiver will only detect waves that are oriented horizontally, which corresponds to $E_t = E_{array}cos(90\si{\degree}-\theta)$. Combining these components, the fraction of the transmitted wave received can be expressed as $cos(\theta)cos(90\si{\degree}-\theta)$. In the case of $\theta=45\si{\degree}$, only $0.5 = -6 dB$ should be received. 
