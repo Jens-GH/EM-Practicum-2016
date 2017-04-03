@@ -1,7 +1,3 @@
-%This script plots the theoretical dependence of pahse velocity inside the
-%waveguide as a function of frequency (8-12GHz).
-%Job van Staveren, 4317386, 16 March 2016
-
 c=3e8;                          %Speed of light
 f=linspace(8e9, 12e9, 1000);    %Frequency axis
 a=22.86e-3;                     %Length of long side of waveguide
